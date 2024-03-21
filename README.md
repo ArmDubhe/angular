@@ -5,3 +5,11 @@ https://devtalles.com/files/angular-cheat-sheet-v2.pdf
 
 cd front
 ng serve -o
+
+
+# ctrl + space  (Display variables in html)
+
+Snipetts
+
+Angular Snippets (John Papa)
+a-   (Select component)
