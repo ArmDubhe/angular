@@ -12,4 +12,4 @@ ng serve -o
 Snipetts
 
 Angular Snippets (John Papa)
-a-   (Select component)
+    a-component   (Select component)(Shortcut)
