@@ -13,3 +13,7 @@ Snipetts
 
 Angular Snippets (John Papa)
     a-component   (Select component)(Shortcut)
+
+Create module  (generate component)   [ng g c --help]
+    ng g c users/user
+
