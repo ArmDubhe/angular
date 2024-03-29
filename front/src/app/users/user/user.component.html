@@ -1,1 +1,29 @@
-<p>user works!</p>
+
+
+<h1>Spiderman</h1>
+<dl>
+    <dt>Nombre:</dt>
+    <dd>{{name}}</dd>
+    
+    <dt>Edad:</dt>
+    <dd>{{age}}</dd>
+
+    <dt>Metodo:</dt>
+    <dd>{{ getUserDescription() }}</dd>
+
+    <dt>Cápitalizado:</dt>
+    <dd>{{ capitalizedName }}</dd>
+</dl>
+
+<button
+    *ngIf="showBtnName"
+    (click)="changeName('Juan')" 
+    class="btn btn-info mx-2">
+    <b>Cambiar nombre</b>
+</button>
+<button 
+    *ngIf="showBtnAge"
+    (click)="changeAge(50)" 
+    class="btn btn-secondary">
+    Cambiar edad
+</button>
