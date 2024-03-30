@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
 
+  public userNames: string[] = ['Armando', 'Frank', 'Alejandra'];
+  public lastDeleted:string = '';
+
+  removeLastElement():void{
+    let deletedElement = this.userNames.pop();
+    // console.log(deletedElement)
+    if(deletedElement){
+      this.lastDeleted = deletedElement;
+    }
+
+  }
 }
