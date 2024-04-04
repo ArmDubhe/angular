@@ -1,9 +1,13 @@
-<h3>User list</h3>
-<h4>Fue borrado</h4>
+<h4>User list</h4>
 
-<div *ngIf="lastDeleted" [@fadeOut]>
+<div *ngIf="lastDeleted; else nothigWasDeleted" [@fadeOut]>
     El elemento "{{lastDeleted}}" fue borrado
 </div>
+
+<ng-template #nothigWasDeleted>
+    <h4><strong>No se ha borrado nada</strong></h4>
+</ng-template>
+
 <button 
     (click)="removeLastElement()"
     class="btn  btn-outline-danger"
