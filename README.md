@@ -4,7 +4,8 @@ ng new front --standalone false
 https://devtalles.com/files/angular-cheat-sheet-v2.pdf
 
 cd front
-ng serve -o
+ng serve -o --port 55847
+npm start
 
 
 # ctrl + space  (Display variables in html)

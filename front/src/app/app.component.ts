@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'front';
-  public message:string = 'My first messaje';
-    
+
+  title = 'Title';
+  public message:string = 'Test message';
+
 }

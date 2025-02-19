@@ -1,24 +1,30 @@
 <h4>User list</h4>
 
-<div *ngIf="lastDeleted; else nothigWasDeleted" [@fadeOut]>
-    El elemento "{{lastDeleted}}" fue borrado
+<div *ngIf="isBtnDeleteItemVisible==true">
+  <button
+      class="btn btn-outline-danger"
+      (click)="removeLastElement()"
+      >
+      Borrar ultimo elemento
+  </button>
 </div>
 
-<ng-template #nothigWasDeleted>
-    <h4><strong>No se ha borrado nada</strong></h4>
-</ng-template>
+<div *ngIf="showRetro">
+  <div *ngIf="lastDeleted else ref_nothigWasDeleted">
+    El elemento "{{lastDeleted}}" fue borrado
+  </div>
+</div>
 
-<button 
-    (click)="removeLastElement()"
-    class="btn  btn-outline-danger"
-    >
-    Borrar ultimo elemento
-</button>
+  <!-- (ng-template) div que no existe -->
+  <ng-template #ref_nothigWasDeleted>
+    <h4><strong>Lista vacia</strong></h4>
+  </ng-template>
+
+
 
 <ul class="mt-2 list-group">
-    <li *ngFor="let names of userNames; index as i" 
+    <li *ngFor="let names of userNames; index as i"
         class="list-group-items">
         <span>{{i}} - {{names}}</span>
     </li>
 </ul>
-
