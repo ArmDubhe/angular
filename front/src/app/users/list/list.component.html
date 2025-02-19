@@ -21,6 +21,13 @@
   </ng-template>
 
 
+<button
+    *ngIf="userNames.length > 0"
+    (click)="removeLastElement()"
+    class="btn  btn-outline-danger"
+    >
+    Borrar ultimo elemento
+</button>
 
 <ul class="mt-2 list-group">
     <li *ngFor="let names of userNames; index as i"
